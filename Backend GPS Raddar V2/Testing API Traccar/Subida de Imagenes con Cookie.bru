@@ -1,0 +1,19 @@
+meta {
+  name: Subida de Imagenes con Cookie
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://app.youtracksistelcel.com/api/devices/8/image
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  : @file()
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Restablecer Contrasena
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url_backend}}/api/v1/recovery/changePassword
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "temporaryKey": "I0NyDIm0lNZa",
+      "password": "Aron.com123",
+      "confirmPassword": "Aron.com123"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

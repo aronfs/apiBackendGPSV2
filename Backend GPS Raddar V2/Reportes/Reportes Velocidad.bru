@@ -1,0 +1,27 @@
+meta {
+  name: Reportes Velocidad
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{url_backend}}/api/v1/reportes/generarReporteVelocidad?id=28&startDate=2025-01-01&endDate=2025-10-11&page=1&limit=10
+  body: none
+  auth: bearer
+}
+
+params:query {
+  id: 28
+  startDate: 2025-01-01
+  endDate: 2025-10-11
+  page: 1
+  limit: 10
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

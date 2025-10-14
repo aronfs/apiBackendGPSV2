@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Backend GPS Raddar V2",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

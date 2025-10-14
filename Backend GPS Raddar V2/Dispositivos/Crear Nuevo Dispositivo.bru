@@ -1,0 +1,36 @@
+meta {
+  name: Crear Nuevo Dispositivo
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url_backend}}/api/v1/device/registerDevice
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:json {
+  {
+     "name": "MODELO-SMARTPHONE",
+     "uniqueid": "12345672",
+     "model": "model",
+     "contact": "22-33",
+     "category": "Car",
+     "attributes": [
+      {
+        "deviceImage": "ffff",
+        "brand_label": "XYZ-987"
+      }
+    ],
+      "protocol": "osmand"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

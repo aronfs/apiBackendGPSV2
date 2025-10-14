@@ -1,0 +1,26 @@
+meta {
+  name: Generar Reportes Excel Seleccion
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{url_backend}}/api/v1/reportes/generateReportExcelSelection?id=36&startDate=2020-01-01&endDate=2025-10-11&typeOfReport=Eventos
+  body: none
+  auth: bearer
+}
+
+params:query {
+  id: 36
+  startDate: 2020-01-01
+  endDate: 2025-10-11
+  typeOfReport: Eventos
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

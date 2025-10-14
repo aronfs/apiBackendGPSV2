@@ -1,0 +1,23 @@
+meta {
+  name: Activar Dispositivo Inactivado
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{url_backend}}/api/v1/device/activeDevice?id=25
+  body: none
+  auth: bearer
+}
+
+params:query {
+  id: 25
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}

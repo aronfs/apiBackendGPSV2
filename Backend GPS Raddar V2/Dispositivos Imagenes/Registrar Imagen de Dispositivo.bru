@@ -1,0 +1,27 @@
+meta {
+  name: Registrar Imagen de Dispositivo
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url_backend}}/api/v1/images/registerImage?deviceId=8
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  deviceId: 8
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:multipart-form {
+  file: @file(/home/aaronviracocha/Imágenes/Capturas de pantalla/Captura desde 2025-08-11 02-12-29.png)
+}
+
+settings {
+  encodeUrl: true
+}

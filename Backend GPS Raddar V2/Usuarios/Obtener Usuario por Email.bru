@@ -1,0 +1,23 @@
+meta {
+  name: Obtener Usuario por Email
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{url_backend}}/api/v1/users/getByEmailUser?email=admin@youtrack.com
+  body: none
+  auth: bearer
+}
+
+params:query {
+  email: admin@youtrack.com
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+}
