@@ -6,10 +6,26 @@ meta {
 
 post {
   url: {{url_backend}}/api/v1/commands/sendCommandsCustom
-  body: none
-  auth: inherit
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:json {
+  { 
+    
+  "deviceId": "32",
+  "description": "",
+  "type": "custom",
+  "message": "getgps"
+  
+  }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
