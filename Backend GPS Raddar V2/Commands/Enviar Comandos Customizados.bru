@@ -1,0 +1,15 @@
+meta {
+  name: Enviar Comandos Customizados
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url_backend}}/api/v1/commands/sendCommandsCustom
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
