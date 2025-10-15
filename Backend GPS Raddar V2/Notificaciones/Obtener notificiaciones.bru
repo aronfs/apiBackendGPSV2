@@ -1,17 +1,13 @@
 meta {
-  name: Obtener Imagen del Dispositivo
+  name: Obtener notificiaciones
   type: http
   seq: 1
 }
 
 get {
-  url: {{url_backend}}/api/v1/images/getByIdImageVehicle?deviceId=32
+  url: {{url_backend}}/api/v1/notifications/getNotification
   body: none
   auth: bearer
-}
-
-params:query {
-  deviceId: 32
 }
 
 auth:bearer {

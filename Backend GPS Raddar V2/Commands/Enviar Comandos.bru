@@ -1,0 +1,16 @@
+meta {
+  name: Enviar Comandos
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url_backend}}/api/v1/commands/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
