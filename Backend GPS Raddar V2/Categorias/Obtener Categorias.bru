@@ -1,17 +1,13 @@
 meta {
-  name: Obtener Comandos
+  name: Obtener Categorias
   type: http
-  seq: 5
+  seq: 2
 }
 
 get {
-  url: {{url_backend}}/api/v1/commands/getCommands?deviceId=36
+  url: {{url_backend}}/api/v1/items/getItems
   body: none
   auth: bearer
-}
-
-params:query {
-  deviceId: 36
 }
 
 auth:bearer {

@@ -5,13 +5,13 @@ meta {
 }
 
 put {
-  url: {{url_backend}}/api/v1/device/updateDevice?id=24
+  url: {{url_backend}}/api/v1/device/updateDevice?id=34
   body: json
   auth: bearer
 }
 
 params:query {
-  id: 24
+  id: 34
 }
 
 auth:bearer {
@@ -20,14 +20,13 @@ auth:bearer {
 
 body:json {
   {
-      "name": "MODELO-ACTUALIZADO",
-      "uniqueid": "1234567",
-      "model": "MODEL-SMARTPHONE",
-      "contact": "333-222",
-      "category": "Car",
-      "attributes": [
+    "name_model": "FCM-Nuevo",
+    "serial_model": "863719068112409",
+    "status_model": "offline",
+    "contact_model": "333-444",
+    "category_model": "Automovil",
+    "attributes": [
       {
-        "deviceImage": "ffff",
         "brand_label": "XYZ-987"
       }
     ]
@@ -36,4 +35,5 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

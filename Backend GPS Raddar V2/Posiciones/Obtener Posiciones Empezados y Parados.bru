@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{url_backend}}/api/v1/positions/positionsStartedAndStoped?id=28&startDate=2025-01-01&endDate=2025-10-10
+  url: {{url_backend}}/api/v1/positions/positionsStartedAndStoped?id=45&startDate=2025-10-13&endDate=2025-10-13
   body: none
   auth: bearer
 }
 
 params:query {
-  id: 28
-  startDate: 2025-01-01
-  endDate: 2025-10-10
+  id: 45
+  startDate: 2025-10-13
+  endDate: 2025-10-13
 }
 
 auth:bearer {
@@ -22,4 +22,5 @@ auth:bearer {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
