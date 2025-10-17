@@ -5,13 +5,13 @@ meta {
 }
 
 post {
-  url: {{url_backend}}/api/v1/images/registerImage?deviceId=8
+  url: {{url_backend}}/api/v1/images/registerImage?deviceId=51
   body: multipartForm
   auth: bearer
 }
 
 params:query {
-  deviceId: 8
+  deviceId: 51
 }
 
 auth:bearer {
@@ -19,9 +19,10 @@ auth:bearer {
 }
 
 body:multipart-form {
-  file: @file(/home/aaronviracocha/Imágenes/Capturas de pantalla/Captura desde 2025-08-11 02-12-29.png)
+  file: @file(/home/aaronviracocha/Imágenes/Capturas de pantalla/CarroDelFuturo3.png)
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

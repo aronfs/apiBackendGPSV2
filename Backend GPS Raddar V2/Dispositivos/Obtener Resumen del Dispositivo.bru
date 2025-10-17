@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{url_backend}}/api/v1/device/getSummmaryDateNow?deviceId=z
+  url: {{url_backend}}/api/v1/device/getSummmaryDateNow?deviceId=34
   body: none
   auth: bearer
 }
 
 params:query {
-  deviceId: z
+  deviceId: 34
 }
 
 auth:bearer {
@@ -20,4 +20,5 @@ auth:bearer {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
