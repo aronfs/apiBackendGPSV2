@@ -1,0 +1,29 @@
+meta {
+  name: Crear Contacto
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url_backend}}/api/v1/contact/createContact
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:json {
+  {
+    "name": "aaron",
+    "email": "aronviracocha7@gmail.com",
+    "number": "0998050443",
+    "address": "Cdla Camilo Ponce y Calle Jorge Carrera Andrade"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

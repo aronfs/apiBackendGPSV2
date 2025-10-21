@@ -1,17 +1,13 @@
 meta {
-  name: Activar FCM
+  name: Obtener Contactos
   type: http
   seq: 3
 }
 
-patch {
-  url: {{url_backend}}/api/v1/accounts/activateFCMAccount?isactivate=true
+get {
+  url: {{url_backend}}/api/v1/contact/getContact
   body: none
   auth: bearer
-}
-
-params:query {
-  isactivate: true
 }
 
 auth:bearer {

@@ -1,0 +1,33 @@
+meta {
+  name: Actualizar Contacto
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{url_backend}}/api/v1/contact/updateContact?id=1
+  body: json
+  auth: bearer
+}
+
+params:query {
+  id: 1
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:json {
+  {
+    "name": "john jara",
+    "email": "johnjara9@gmail.com",
+    "number": "0998050443",
+    "address": "Cdla Camilo Ponce"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

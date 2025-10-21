@@ -5,19 +5,20 @@ meta {
 }
 
 post {
-  url: {{url_backend}}/api/v1/userImage/registerUserImage?email=aaronviracocha7@gmail.com
+  url: {{url_backend}}/api/v1/userImage/registerUserImage?email=motavalomarin@gmail.com
   body: multipartForm
   auth: inherit
 }
 
 params:query {
-  email: aaronviracocha7@gmail.com
+  email: motavalomarin@gmail.com
 }
 
 body:multipart-form {
-  file: @file(/home/aaronviracocha/Imágenes/Capturas de pantalla/avatar1.png)
+  file: @file(/home/aaron/Imágenes/Capturas de pantalla/Captura desde 2025-10-20 12-20-17.png)
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

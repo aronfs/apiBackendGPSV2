@@ -1,17 +1,17 @@
 meta {
-  name: Activar FCM
+  name: Inactivar Contacto
   type: http
-  seq: 3
+  seq: 4
 }
 
 patch {
-  url: {{url_backend}}/api/v1/accounts/activateFCMAccount?isactivate=true
+  url: {{url_backend}}/api/v1/contact/inactiveContact?id=3
   body: none
   auth: bearer
 }
 
 params:query {
-  isactivate: true
+  id: 3
 }
 
 auth:bearer {
