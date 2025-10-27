@@ -4,10 +4,14 @@ meta {
   seq: 6
 }
 
-post {
+get {
   url: {{url_backend}}/api/v1/accounts/closeSession
   body: none
-  auth: inherit
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
 }
 
 settings {

@@ -1,0 +1,28 @@
+meta {
+  name: Actualizar Icono de Dispositivo
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{url_backend}}/api/v1/icon/updateIcon?deviceId=32
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  deviceId: 32
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:multipart-form {
+  file: @file(/home/aaron/Descargas/diseno-moderno-de-automoviles-rojos-innovacion-en-el-transporte-de-vehiculos-compactos/fd4007db-d7c0-490e-b72d-119ddf611abd.jpg)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

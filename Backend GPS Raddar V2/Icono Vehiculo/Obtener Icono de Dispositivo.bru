@@ -1,17 +1,17 @@
 meta {
-  name: Obtener Ultima Posicion
+  name: Obtener Icono de Dispositivo
   type: http
-  seq: 4
+  seq: 2
 }
 
 get {
-  url: {{url_backend}}/api/v1/positions/getLastesPosition?id=45
+  url: {{url_backend}}/api/v1/icon/getIconDevice?deviceId=32
   body: none
   auth: bearer
 }
 
 params:query {
-  id: 45
+  deviceId: 32
 }
 
 auth:bearer {
