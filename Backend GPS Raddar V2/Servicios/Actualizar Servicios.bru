@@ -1,13 +1,17 @@
 meta {
-  name: Crear Servicio
+  name: Actualizar Servicios
   type: http
-  seq: 1
+  seq: 4
 }
 
-post {
-  url: {{url_backend}}/api/v1/service/createService
+put {
+  url: {{url_backend}}/api/v1/service/updateService?id=3
   body: json
   auth: bearer
+}
+
+params:query {
+  id: 3
 }
 
 auth:bearer {

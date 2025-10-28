@@ -1,0 +1,40 @@
+meta {
+  name: Actualizar Plan
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{url_backend}}/api/v1/plan/updatePlan?id=1
+  body: json
+  auth: bearer
+}
+
+params:query {
+  id: 1
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+body:json {
+  {
+    "name_plan": "Servicio Rastreo Actualizado",
+    "price_plan": 25.0,
+    "description": "Monitoreo en tiempo real con alertas personalizadas",
+    "caracteristics": [
+      "1 Vehículo",
+      "Alertas de vencimiento",
+      "Historial de ubicaciones",
+      "Notificaciones por correo"
+    ],
+    "id_service": "1"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Obtener PLanes
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{url_backend}}/api/v1/plan/getAllPlan
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{Authorization}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
